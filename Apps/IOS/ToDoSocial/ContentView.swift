@@ -1,23 +1,28 @@
-//
-//  ContentView.swift
-//  ToDoSocial
-//
-//  Created by Qin Chingis on 1/14/25.
-//
-
 import SwiftUI
+import FirebaseFirestore
 
 struct ContentView: View   {
+    
+    let db = Firestore.firestore()
+    
     var body: some View    {
-        ZStack {
-            Rectangle()
-                .frame(width: 300, height: 300)
-                .foregroundColor(.black)
-                .cornerRadius(30)
-            Text("Hello World!")
-                .foregroundColor(.white)
+        Button("Add user") {
+            addUser()
         }
-        Spacer()
+    }
+    func addUser() {
+        let usersRef = db.collection("users")
+        let newUser: [String: Any] = [
+            "name": "John Doe",
+            "password": "securePassword123"
+        ]
+        usersRef.addDocument(data: newUser) { error in
+            if let error = error {
+                print("Ошибка добавления документа: \(error.localizedDescription)")
+            } else {
+                print("Документ успешно добавлен!")
+            }
+        }
     }
 }
 #Preview {
