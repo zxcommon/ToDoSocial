@@ -6,6 +6,14 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		7DEF72B12D3694170070C11C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B02D3694170070C11C /* FirebaseAnalytics */; };
+		7DEF72B32D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B22D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		7DEF72B52D3694170070C11C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B42D3694170070C11C /* FirebaseCore */; };
+		7DEF72B72D3694170070C11C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B62D3694170070C11C /* FirebaseDatabase */; };
+		7DEF72B92D3694170070C11C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B82D3694170070C11C /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		7D7990762D36863F004E48D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -29,20 +37,69 @@
 		7D79907F2D36863F004E48D6 /* ToDoSocialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoSocialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		7DEF72912D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocial" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				IOS/ToDoSocial/ToDoSocial.xcdatamodeld,
+				IOS/ToDoSocialTests/ToDoSocialTests.swift,
+				IOS/ToDoSocialUITests/ToDoSocialUITests.swift,
+				IOS/ToDoSocialUITests/ToDoSocialUITestsLaunchTests.swift,
+			);
+			target = 7D79905F2D36863E004E48D6 /* ToDoSocial */;
+		};
+		7DEF72932D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocialTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				IOS/ToDoSocialTests/ToDoSocialTests.swift,
+			);
+			target = 7D7990742D36863F004E48D6 /* ToDoSocialTests */;
+		};
+		7DEF72942D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocialUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				IOS/ToDoSocialUITests/ToDoSocialUITests.swift,
+				IOS/ToDoSocialUITests/ToDoSocialUITestsLaunchTests.swift,
+			);
+			target = 7D79907E2D36863F004E48D6 /* ToDoSocialUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		7DEF72922D368E540070C11C /* Exceptions for "Apps" folder in "Compile Sources" phase from "ToDoSocial" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 7D79905C2D36863E004E48D6 /* Sources */;
+			membershipExceptions = (
+				IOS/ToDoSocial/ToDoSocial.xcdatamodeld,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		7D7990622D36863E004E48D6 /* ToDoSocial */ = {
+		7DEF72762D368E3A0070C11C /* Apps */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDoSocial;
+			exceptions = (
+				7DEF72912D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocial" target */,
+				7DEF72922D368E540070C11C /* Exceptions for "Apps" folder in "Compile Sources" phase from "ToDoSocial" target */,
+				7DEF72932D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocialTests" target */,
+				7DEF72942D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocialUITests" target */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
-		7D7990782D36863F004E48D6 /* ToDoSocialTests */ = {
+		7DEF72992D368FDA0070C11C /* Shared */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDoSocialTests;
+			path = Shared;
 			sourceTree = "<group>";
 		};
-		7D7990822D36863F004E48D6 /* ToDoSocialUITests */ = {
+		7DEF729A2D368FDA0070C11C /* Docs */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ToDoSocialUITests;
+			path = Docs;
+			sourceTree = "<group>";
+		};
+		7DEF72A12D36912D0070C11C /* Tools */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +109,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DEF72B12D3694170070C11C /* FirebaseAnalytics in Frameworks */,
+				7DEF72B52D3694170070C11C /* FirebaseCore in Frameworks */,
+				7DEF72B72D3694170070C11C /* FirebaseDatabase in Frameworks */,
+				7DEF72B92D3694170070C11C /* FirebaseFirestore in Frameworks */,
+				7DEF72B32D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,9 +137,10 @@
 		7D7990572D36863E004E48D6 = {
 			isa = PBXGroup;
 			children = (
-				7D7990622D36863E004E48D6 /* ToDoSocial */,
-				7D7990782D36863F004E48D6 /* ToDoSocialTests */,
-				7D7990822D36863F004E48D6 /* ToDoSocialUITests */,
+				7DEF72762D368E3A0070C11C /* Apps */,
+				7DEF72992D368FDA0070C11C /* Shared */,
+				7DEF72A12D36912D0070C11C /* Tools */,
+				7DEF729A2D368FDA0070C11C /* Docs */,
 				7D7990612D36863E004E48D6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,10 +171,17 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				7D7990622D36863E004E48D6 /* ToDoSocial */,
+				7DEF72762D368E3A0070C11C /* Apps */,
+				7DEF729A2D368FDA0070C11C /* Docs */,
+				7DEF72A12D36912D0070C11C /* Tools */,
 			);
 			name = ToDoSocial;
 			packageProductDependencies = (
+				7DEF72B02D3694170070C11C /* FirebaseAnalytics */,
+				7DEF72B22D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport */,
+				7DEF72B42D3694170070C11C /* FirebaseCore */,
+				7DEF72B62D3694170070C11C /* FirebaseDatabase */,
+				7DEF72B82D3694170070C11C /* FirebaseFirestore */,
 			);
 			productName = ToDoSocial;
 			productReference = 7D7990602D36863E004E48D6 /* ToDoSocial.app */;
@@ -129,9 +199,6 @@
 			);
 			dependencies = (
 				7D7990772D36863F004E48D6 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				7D7990782D36863F004E48D6 /* ToDoSocialTests */,
 			);
 			name = ToDoSocialTests;
 			packageProductDependencies = (
@@ -153,9 +220,6 @@
 			dependencies = (
 				7D7990812D36863F004E48D6 /* PBXTargetDependency */,
 			);
-			fileSystemSynchronizedGroups = (
-				7D7990822D36863F004E48D6 /* ToDoSocialUITests */,
-			);
 			name = ToDoSocialUITests;
 			packageProductDependencies = (
 			);
@@ -175,6 +239,7 @@
 				TargetAttributes = {
 					7D79905F2D36863E004E48D6 = {
 						CreatedOnToolsVersion = 16.2;
+						LastSwiftMigration = 1620;
 					};
 					7D7990742D36863F004E48D6 = {
 						CreatedOnToolsVersion = 16.2;
@@ -195,6 +260,9 @@
 			);
 			mainGroup = 7D7990572D36863E004E48D6;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7D7990612D36863E004E48D6 /* Products */;
 			projectDirPath = "";
@@ -393,9 +461,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ToDoSocial/Preview Content\"";
 				DEVELOPMENT_TEAM = FM5UA69R37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -412,6 +480,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Kekwaker.ToDoSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Apps/Backend/ToDoSocial-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -422,9 +492,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ToDoSocial/Preview Content\"";
 				DEVELOPMENT_TEAM = FM5UA69R37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -441,6 +511,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Kekwaker.ToDoSocial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "Apps/Backend/ToDoSocial-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -558,6 +629,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.7.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7DEF72B02D3694170070C11C /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		7DEF72B22D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		7DEF72B42D3694170070C11C /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		7DEF72B62D3694170070C11C /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		7DEF72B82D3694170070C11C /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D7990582D36863E004E48D6 /* Project object */;
 }
