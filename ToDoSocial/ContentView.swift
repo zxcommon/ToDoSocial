@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("sdsdd")
+        ZStack {
+            Rectangle()
+                .frame(width: 300, height: 300)
+                .foregroundColor(.black)
+                .cornerRadius(30)
+            Text("Hello World!")
+                .foregroundColor(.white)
+        }
+        Spacer()
     }
 }
 #Preview {
