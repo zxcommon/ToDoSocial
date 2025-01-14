@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    var body: some View {
+struct ContentView: View   {
+    var body: some View    {
         ZStack {
             Rectangle()
                 .frame(width: 300, height: 300)
