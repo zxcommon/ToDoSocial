@@ -138,10 +138,10 @@
 			isa = PBXGroup;
 			children = (
 				7DEF72762D368E3A0070C11C /* Apps */,
+				7D7990612D36863E004E48D6 /* Products */,
 				7DEF72992D368FDA0070C11C /* Shared */,
 				7DEF72A12D36912D0070C11C /* Tools */,
 				7DEF729A2D368FDA0070C11C /* Docs */,
-				7D7990612D36863E004E48D6 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
