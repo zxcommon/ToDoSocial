@@ -41,6 +41,7 @@
 		7DEF72912D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocial" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Backend/utils/logger.cpp,
 				IOS/ToDoSocial/ToDoSocial.xcdatamodeld,
 				IOS/ToDoSocialTests/ToDoSocialTests.swift,
 				IOS/ToDoSocialUITests/ToDoSocialUITests.swift,
@@ -73,6 +74,13 @@
 				IOS/ToDoSocial/ToDoSocial.xcdatamodeld,
 			);
 		};
+		7DEF72FB2D3765000070C11C /* Exceptions for "Apps" folder in "Copy Bundle Resources" phase from "ToDoSocial" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 7D79905E2D36863E004E48D6 /* Resources */;
+			membershipExceptions = (
+				Backend/utils/logger.cpp,
+			);
+		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -81,6 +89,7 @@
 			exceptions = (
 				7DEF72912D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocial" target */,
 				7DEF72922D368E540070C11C /* Exceptions for "Apps" folder in "Compile Sources" phase from "ToDoSocial" target */,
+				7DEF72FB2D3765000070C11C /* Exceptions for "Apps" folder in "Copy Bundle Resources" phase from "ToDoSocial" target */,
 				7DEF72932D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocialTests" target */,
 				7DEF72942D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocialUITests" target */,
 			);
@@ -464,9 +473,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/Apps/IOS/ToDoSocial/Preview Content/Preview Assets.xcassets\"";
 				DEVELOPMENT_TEAM = FM5UA69R37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/opt/homebrew/Cellar/curl/8.11.1/include/**",
+					"/opt/homebrew/opt/openssl/include/**",
+					/opt/homebrew/include,
+				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -495,9 +510,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/Apps/IOS/ToDoSocial/Preview Content/Preview Assets.xcassets\"";
 				DEVELOPMENT_TEAM = FM5UA69R37;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"/opt/homebrew/Cellar/curl/8.11.1/include/**",
+					"/opt/homebrew/opt/openssl/include/**",
+					/opt/homebrew/include,
+				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
