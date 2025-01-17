@@ -41,11 +41,29 @@
 		7DEF72912D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocial" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
+				Backend/.gitignore,
+				Backend/encryption/aes_cipher.cpp,
+				Backend/Firebase/firebase_handler.cpp,
 				Backend/utils/logger.cpp,
+				IOS/ToDoSocial/ContentView.swift,
 				IOS/ToDoSocial/ToDoSocial.xcdatamodeld,
+				IOS/ToDoSocial/ToDoSocialApp.swift,
 				IOS/ToDoSocialTests/ToDoSocialTests.swift,
 				IOS/ToDoSocialUITests/ToDoSocialUITests.swift,
 				IOS/ToDoSocialUITests/ToDoSocialUITestsLaunchTests.swift,
+				Web/.gitignore,
+				Web/eslint.config.js,
+				Web/index.html,
+				"Web/package-lock.json",
+				Web/package.json,
+				Web/public/vite.svg,
+				Web/README.md,
+				Web/src/App.css,
+				Web/src/assets/react.svg,
+				Web/src/index.css,
+				Web/tsconfig.app.json,
+				Web/tsconfig.json,
+				Web/tsconfig.node.json,
 			);
 			target = 7D79905F2D36863E004E48D6 /* ToDoSocial */;
 		};
@@ -66,30 +84,11 @@
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
-/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		7DEF72922D368E540070C11C /* Exceptions for "Apps" folder in "Compile Sources" phase from "ToDoSocial" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 7D79905C2D36863E004E48D6 /* Sources */;
-			membershipExceptions = (
-				IOS/ToDoSocial/ToDoSocial.xcdatamodeld,
-			);
-		};
-		7DEF72FB2D3765000070C11C /* Exceptions for "Apps" folder in "Copy Bundle Resources" phase from "ToDoSocial" target */ = {
-			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
-			buildPhase = 7D79905E2D36863E004E48D6 /* Resources */;
-			membershipExceptions = (
-				Backend/utils/logger.cpp,
-			);
-		};
-/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		7DEF72762D368E3A0070C11C /* Apps */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				7DEF72912D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocial" target */,
-				7DEF72922D368E540070C11C /* Exceptions for "Apps" folder in "Compile Sources" phase from "ToDoSocial" target */,
-				7DEF72FB2D3765000070C11C /* Exceptions for "Apps" folder in "Copy Bundle Resources" phase from "ToDoSocial" target */,
 				7DEF72932D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocialTests" target */,
 				7DEF72942D368E540070C11C /* Exceptions for "Apps" folder in "ToDoSocialUITests" target */,
 			);
@@ -479,8 +478,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/opt/homebrew/Cellar/curl/8.11.1/include/**",
-					"/opt/homebrew/opt/openssl/include/**",
-					/opt/homebrew/include,
+					"/opt/homebrew/Cellar/openssl@3/3.4.0/include/**",
+					"/opt/homebrew/Cellar/nlohmann-json/3.11.3/include/**",
 				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -516,8 +515,8 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/opt/homebrew/Cellar/curl/8.11.1/include/**",
-					"/opt/homebrew/opt/openssl/include/**",
-					/opt/homebrew/include,
+					"/opt/homebrew/Cellar/openssl@3/3.4.0/include/**",
+					"/opt/homebrew/Cellar/nlohmann-json/3.11.3/include/**",
 				);
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
