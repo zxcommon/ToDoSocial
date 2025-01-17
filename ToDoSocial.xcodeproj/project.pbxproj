@@ -6,14 +6,6 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		7DEF72B12D3694170070C11C /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B02D3694170070C11C /* FirebaseAnalytics */; };
-		7DEF72B32D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B22D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport */; };
-		7DEF72B52D3694170070C11C /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B42D3694170070C11C /* FirebaseCore */; };
-		7DEF72B72D3694170070C11C /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B62D3694170070C11C /* FirebaseDatabase */; };
-		7DEF72B92D3694170070C11C /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 7DEF72B82D3694170070C11C /* FirebaseFirestore */; };
-/* End PBXBuildFile section */
-
 /* Begin PBXContainerItemProxy section */
 		7D7990762D36863F004E48D6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -117,11 +109,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DEF72B12D3694170070C11C /* FirebaseAnalytics in Frameworks */,
-				7DEF72B52D3694170070C11C /* FirebaseCore in Frameworks */,
-				7DEF72B72D3694170070C11C /* FirebaseDatabase in Frameworks */,
-				7DEF72B92D3694170070C11C /* FirebaseFirestore in Frameworks */,
-				7DEF72B32D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +137,7 @@
 				7DEF72992D368FDA0070C11C /* Shared */,
 				7DEF72A12D36912D0070C11C /* Tools */,
 				7DEF729A2D368FDA0070C11C /* Docs */,
+				7DE425972D3A98490035368F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +149,13 @@
 				7D79907F2D36863F004E48D6 /* ToDoSocialUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7DE425972D3A98490035368F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,11 +180,6 @@
 			);
 			name = ToDoSocial;
 			packageProductDependencies = (
-				7DEF72B02D3694170070C11C /* FirebaseAnalytics */,
-				7DEF72B22D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport */,
-				7DEF72B42D3694170070C11C /* FirebaseCore */,
-				7DEF72B62D3694170070C11C /* FirebaseDatabase */,
-				7DEF72B82D3694170070C11C /* FirebaseFirestore */,
 			);
 			productName = ToDoSocial;
 			productReference = 7D7990602D36863E004E48D6 /* ToDoSocial.app */;
@@ -269,7 +259,7 @@
 			mainGroup = 7D7990572D36863E004E48D6;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				7DE425982D3A9DE40035368F /* XCRemoteSwiftPackageReference "firebase-cpp-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 7D7990612D36863E004E48D6 /* Products */;
@@ -475,6 +465,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/Apps/IOS/ToDoSocial/Preview Content/Preview Assets.xcassets\"";
 				DEVELOPMENT_TEAM = FM5UA69R37;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/frameworks/darwin/arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/frameworks/darwin/x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/frameworks/darwin/universal",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/opt/homebrew/Cellar/curl/8.11.1/include/**",
@@ -489,6 +485,35 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/android/arm64-v8a",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/ios/device-arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MD/x64/Debug",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MT/x86/Release",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MD/x86/Debug",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/android/armeabi-v7a",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/tvos/device-arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MT/x64/Release",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/tvos/universal",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MT/x86/Debug",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/ios/simulator-arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/android/x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MT/x64/Debug",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MD/x86/Release",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/tvos/simulator-x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/ios/universal",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/android/x86",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MD/x64/Release",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/darwin/arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/ios/simulator-x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/linux/i386/legacy",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/linux/i386/cxx11",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/linux/x86_64/cxx11",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/darwin/universal",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/darwin/x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/linux/x86_64/legacy",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Kekwaker.ToDoSocial;
@@ -512,6 +537,12 @@
 				DEVELOPMENT_ASSET_PATHS = "\"$(SRCROOT)/Apps/IOS/ToDoSocial/Preview Content/Preview Assets.xcassets\"";
 				DEVELOPMENT_TEAM = FM5UA69R37;
 				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/frameworks/darwin/arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/frameworks/darwin/x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/frameworks/darwin/universal",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				HEADER_SEARCH_PATHS = (
 					"/opt/homebrew/Cellar/curl/8.11.1/include/**",
@@ -526,6 +557,35 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/android/arm64-v8a",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/ios/device-arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MD/x64/Debug",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MT/x86/Release",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MD/x86/Debug",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/android/armeabi-v7a",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/tvos/device-arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MT/x64/Release",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/tvos/universal",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MT/x86/Debug",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/ios/simulator-arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/android/x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MT/x64/Debug",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MD/x86/Release",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/tvos/simulator-x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/ios/universal",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/android/x86",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/windows/VS2019/MD/x64/Release",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/darwin/arm64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/ios/simulator-x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/linux/i386/legacy",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/linux/i386/cxx11",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/linux/x86_64/cxx11",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/darwin/universal",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/darwin/x86_64",
+					"$(PROJECT_DIR)/Apps/Backend/firebase_cpp_sdk/libs/linux/x86_64/legacy",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Kekwaker.ToDoSocial;
@@ -651,43 +711,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		7DE425982D3A9DE40035368F /* XCRemoteSwiftPackageReference "firebase-cpp-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			repositoryURL = "https://github.com/firebase/firebase-cpp-sdk.git";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 11.7.0;
+				branch = main;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		7DEF72B02D3694170070C11C /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		7DEF72B22D3694170070C11C /* FirebaseAnalyticsWithoutAdIdSupport */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsWithoutAdIdSupport;
-		};
-		7DEF72B42D3694170070C11C /* FirebaseCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCore;
-		};
-		7DEF72B62D3694170070C11C /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
-		7DEF72B82D3694170070C11C /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 7DEF72AF2D3694170070C11C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7D7990582D36863E004E48D6 /* Project object */;
 }

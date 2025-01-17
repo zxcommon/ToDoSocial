@@ -1,11 +1,38 @@
 #include <iostream>
+#include "firebase/app.h"
+#include "firebase/database.h"
 
 int main() {
-    std::cout<<"Hellop";
-    return 0;
+
+    firebase::AppOptions options;
+        options.set_api_key("AIzaSyAfdRiPqnxCDQMe8-OEs4h1mKVpkyFGmVU"); // Укажите свой API Key из Firebase Console
+        options.set_project_id("todosocial-6d41c"); // Укажите ID проекта
+        options.set_database_url("https://console.firebase.google.com/u/0/project/todosocial-6d41c/firestore/databases/-default-/data"); // URL базы данных
+
+        // Создание экземпляра Firebase приложения
+        firebase::App* app = firebase::App::Create(options);
+
+        // Подключение к Realtime Database
+        firebase::database::Database* database = firebase::database::Database::GetInstance(app);
+        firebase::database::DatabaseReference ref = database->GetReference("users");
+
+        // Добавление данных в базу
+        firebase::Future<void> result = ref.Child("user1").SetValue("Hello Firebase!");
+        while (result.status() != firebase::kFutureStatusComplete) {
+            std::cout << "Ожидание завершения операции..." << std::endl;
+        }
+
+        if (result.error() == firebase::database::kErrorNone) {
+            std::cout << "Данные успешно добавлены в Firebase!" << std::endl;
+        } else {
+            std::cerr << "Ошибка добавления данных: " << result.error_message() << std::endl;
+        }
+
+        // Освобождение ресурсов
+        delete app;
+
+        return 0;
 }
-
-
 
 
 
